@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Kaushik's Awesome Memory Game</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="myBtn">More Information</button>
+        <button id="lvl1">Start Level One</button>
+        <div class="hud">
+            <div class="label">Kaushik's Memory Game</div>
+            <div class="click-counter"> no.of clicks:</div>
+            <div class="timer"></div>
+        </div>
+            <div class="container">    
+
+        </div>
+        
+        <div id="modal" class="modal">
+            <div class="modal-text">
+                <span class="close">&times;</span>
+                <h1>Information about my Memory Game </h1>
+                <h3>This is a simple memory game</h3>
+                <h3>The user can Click on the cards to turn them over</h3>
+                <h3>Each card has a letter from the English alphabet (A to Z)</h3>
+                <h3>Once the user matches two cards, the cards remain revealed</h3>
+                <h3>The user starts at level 1 and progresses to level 3 </h3>
+                <h3>The difficulty of each level will also be variable</h3>
+                <h3>If the user cannot match all the available cards in the given time the player loses the game</h3>
+                <h3>Two aspects of the users performance is kept track of</h3>
+                <h3>1. The no. of clicks 2. The amount of time spent</h3>
+                <h3>The user should think the coder is AWESOME since the coder of the game did not know any coding a few weeks ago!</h3>
+            </div>
+        </div> 
+
+        <div id="winModal" class="winModal">
+            <div class="winModal-text">
+                <span class="winClose" id="winClose">&times;</span>
+                <h1>Congratulations </h1>
+                <h3>You completed the level</h3>
+                <p>You completed the game in <span id="finalMove"></span> moves</p>
+                <p>You completed the game in <span id="finalTime"></span></p>
+                <button id="level2">Play level 2</button>
+                <button id="level3">Play level 3</button>
+                <button id="endGame">End Game</button>
+
+            </div>            
+        </div>               
+    </body>
+    <script type="text/javascript" src="app.js"></script>
+</html>
