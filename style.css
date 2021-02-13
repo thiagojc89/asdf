@@ -1,6 +1,15 @@
 /**********************************
 * GENERAL
 ***********************************/
+body{
+background-color:white;
+background-image:
+radial-gradient(mistyrose 9px, transparent 10px),
+repeating-radial-gradient(mistyrose 0, mistyrose 4px, transparent 5px, transparent 20px, mistyrose 21px, mistyrose 25px, transparent 26px, transparent 50px);
+background-size: 30px 30px, 90px 90px;
+background-position: 0 0;
+}
+
 .container {
   padding-top: 20px;
   display: flex;
@@ -10,26 +19,35 @@
   align-items: center;
 }
 
+
 .hud {
   margin-left: 25%;
-  display: flex;
   height: 25%;
   width: 50%;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  flex-direction: row;
+  
 
-  background-color: black;
-  font-family: "Comic Sans MS";
+background-color:silver;
+background-image:
+  radial-gradient(circle at 100% 150%, pink 24%, white 24%, white 28%, pink 28%, pink 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, pink 24%, white 24%, white 28%, pink 28%, pink 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, white 10%, pink 10%, pink 23%, white 23%, white 30%, pink 30%, pink 43%, white 43%, white 50%, pink 50%, pink 63%, white 63%, white 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, white 5%, pink 5%, pink 15%, white 15%, white 20%, pink 20%, pink 29%, white 29%, white 34%, pink 34%, pink 44%, white 44%, white 49%, transparent 49%, transparent),
+  radial-gradient(circle at 0    50%, white 5%, pink 5%, pink 15%, white 15%, white 20%, pink 20%, pink 29%, white 29%, white 34%, pink 34%, pink 44%, white 44%, white 49%, transparent 49%, transparent);
+  background-size: 100px 50px;
+
+
   font-weight: 700;
   word-spacing: 2px;
-  color: white; 
+  color: black; 
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;'
   align-items: center;
 }
+
 
 
 /**********************************
@@ -47,8 +65,21 @@
 }
 
 .card-back  {
-  background-size: 100px 100px;
-  background-color: black;
+  background:
+    radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+    radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+    radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+    radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+    radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+
+    radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+    radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+    radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+    radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+    radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+    background-color:#b03;
+    background-size:100px 100px;
+  color: transparent;
 }
 
 .disabled {

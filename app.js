@@ -9,8 +9,8 @@ console.log("Project 1: Memory Game")
 let start_time= 0
 let matchNum=0
 let timer=0
-const array1=['A', 'B', 'C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-const array2=['A', 'B', 'C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+const array1=['&#128022', '&#128014', '&#128011','&#128001','&#128004','&#128005','&#128006','&#128009','&#128007','&#128017','&#128018','&#128019','&#128021','&#128024','&#128025','&#128032','&#128030','&#128034','&#128086','&#128083','&#128102','&#128103','&#128121','&#128125','&#128132','&#128132']
+const array2=['&#128022', '&#128014', '&#128011','&#128001','&#128004','&#128005','&#128006','&#128009','&#128007','&#128017','&#128018','&#128019','&#128021','&#128024','&#128025','&#128032','&#128030','&#128034','&#128086','&#128083','&#128102','&#128103','&#128121','&#128125','&#128132','&#128132']
 let array3=[]
 let clicks=0
 let checkForMatchArray = []//This array will only hold 2 cards to check for match
@@ -41,6 +41,9 @@ window.onclick = function(event) {
    modal.style.display = 'none';
   }
 }
+//#######################################################################################
+//#################################|||Functions|||#######################################
+//#######################################################################################
 
 function levelOne(){
 //#######################################################################################
@@ -189,9 +192,6 @@ function levelThree(){
       allCardsArray[i].addEventListener("click",forTheWin);
   }
 }
-//#######################################################################################
-//#################################|||Functions|||#######################################
-//#######################################################################################
 
 
 
@@ -266,7 +266,7 @@ function startGame(){
   array3=[]
 }
 
-    //deleting old cards:
+//###########################deleting old cards#########################################
 
 function clearOldCards(){
     let parent= document.querySelector(".container")
@@ -275,31 +275,30 @@ function clearOldCards(){
     for(let i=0; i<num; i++){
       parent.removeChild(num[i])
     }
-
 }
 
-
-// shuffles cards when page is refreshed / loads
+//#############################shuffles cards when page is refreshed / loads#############
 function clickCounter(){
   clicks++
   document.querySelector('.click-counter').innerHTML="no.of moves: "+clicks  
 }
-
+//###############################count down timer incl time up alert#########################
 function countDownTimer(){//checks to see amount of time remaining
   start_time=start_time-1
   let mins=Math.floor(start_time/60)
   let sec=Math.floor(start_time%60)
-  document.querySelector(".timer").innerHTML="Time Remaining: "+mins+" Mins"+" : "+sec+" Secs"
+  document.querySelector(".timer").innerHTML="&#9200: "+mins+" Mins"+" : "+sec+" Secs"
    if (mins===0 && sec===0) {
    stopTimer(clock)
   alert("Your Time is Up. You lose. You must restart the game.")
+  endGame ()
   }
 }
-
+//################################clearing intervals########################################
 function stopTimer(element){
   clearInterval(element)
 }
-
+//####################################modal for win########################################
 function winModal(){//for Congrats Modal
   let modalForWin=document.querySelector('.winModal')
   let closeBtnWin = document.querySelector("#winClose")
@@ -318,19 +317,18 @@ function winModal(){//for Congrats Modal
    modalForWin.style.display = 'none';
   }
   // startGame()
-  // When the user clicks on (x), close it
+  // ################################When the user clicks on (x), close it###################
      closeBtnWin.onclick = function() {
      modalForWin.style.display = 'none';
   }
-  // When the user clicks on window, close it
+  //######################### When the user clicks on window, close it#######################
   window.onclick = function(event) {
      if (event.target == modalForWin) {
      modalForWin.style.display = 'none';
     }
   }
 }
-
-
+//#############################What happens on win###########################################
 function forTheWin(){
   let totalMatches=document.querySelectorAll('.match').length
   if (totalMatches===matchNum){
@@ -341,10 +339,7 @@ function forTheWin(){
   } 
 }
 
-function endGame(){
- document.body.innerHTML=""
-}
-
+//####################################activating levels####################################
 function activateLevelOne(){
 document.querySelector('.container').innerHTML=''
 levelOne()
@@ -360,8 +355,8 @@ document.querySelector('.container').innerHTML=''
 levelThree()
 }
 
-function disableClick(){
-    $(this).prop('disabled', true);
+//###########################clearing screen on endgame#############################
+function endGame(){
+ document.body.innerHTML=""
 }
-
 
