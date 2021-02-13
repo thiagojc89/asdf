@@ -1,3 +1,6 @@
+<h1>Wire Frame</h1>
+<img src="wireFrame Image.png">
+
 <h1> seir_project1_memory_game_Final</h1>	
 <h2>Memory Game Repo</h2>
 <ul>	
